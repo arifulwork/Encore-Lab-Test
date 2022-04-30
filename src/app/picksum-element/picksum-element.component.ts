@@ -10,16 +10,17 @@ import { Observable } from 'rxjs';
 export class PicksumElementComponent implements OnInit {
 
 
-
-  constructor(private picsumService: PicsumService) {}
+  picksumelement: Observable<any>;
+  constructor(private picsumService: PicsumService) {
+    
+  }
 
   ngOnInit(): void {
     this.getImages();
   }
 
  getImages(){
-   this.picsumService.getPicsum().subscribe((d)=>{
-    console.log(d);
-   });
+  this.picksumelement = this.picsumService.getPicsum();
+   };
 }
-}
+
