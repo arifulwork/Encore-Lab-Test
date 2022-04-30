@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PicsumService } from '../services/picsum.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-picksum-element',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PicksumElementComponent implements OnInit {
 
-  constructor() { }
+
+
+  constructor(private picsumService: PicsumService) {}
 
   ngOnInit(): void {
+    this.getImages();
   }
 
+ getImages(){
+   this.picsumService.getPicsum().subscribe((d)=>{
+    console.log(d);
+   });
+}
 }
