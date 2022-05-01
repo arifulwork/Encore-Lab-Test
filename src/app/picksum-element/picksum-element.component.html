@@ -3,11 +3,16 @@
    
 <div class="container">
   <div class="row">
+  
+
+
     <div class="col-4" *ngFor="let i of picksumelement | async">
       <div class="card">
-        <img [src]="i.download_url" class="image-cover" height="500" width="500" />
+        <h5>{{ i.id }}</h5>
         <h5>{{ i.author }}</h5>
+        <img [src]="i.download_url" class="image-cover" height="500" width="500" />
+        
+        </div>
       </div>
     </div>
   </div>
-</div>

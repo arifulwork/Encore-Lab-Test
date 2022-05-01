@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PicsumService } from '../services/picsum.service';
 import { Observable } from 'rxjs';
 
+
 @Component({
   selector: 'app-picksum-element',
   templateUrl: './picksum-element.component.html',
@@ -17,6 +18,7 @@ export class PicksumElementComponent implements OnInit {
 
   ngOnInit(): void {
     this.getImages();
+    
   }
 
  getImages(){

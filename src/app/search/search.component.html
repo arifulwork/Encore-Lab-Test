@@ -1,0 +1,22 @@
+
+<div class="container">
+
+    <div class="row">
+
+        <div>
+            <input type="text" name="search" [(ngModel)]="term" placeholder="search by id or name">
+        </div>
+
+
+        <div *ngFor="let i of search | filter:term">
+            
+                <h5>{{ i.id }}</h5>
+                <h5>{{ i.author }}</h5>
+                <img [src]="i.download_url" class="image-cover" height="500" width="500" />
+            
+          </div>
+        </div>
+      </div>
+
+  
+
